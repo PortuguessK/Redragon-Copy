@@ -1,0 +1,216 @@
+.Background {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+  transition: background .9s;
+}
+.BgLight {
+  background-color: var(--dark);
+}
+.BgDark {
+  background-color: var(--light);
+}
+@media (min-width: 1000px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1366px;
+    height: 80px;
+  }
+  nav {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 100%;
+    transition: background 0.7s;
+    border-radius: 0px 0px 4px 4px;
+  }
+  .NavLight {
+    background-color: var(--light);
+  }
+  .NavDark {
+    background-color: var(--dark);
+  }
+  /* LOGO */
+  .LogoContainer {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .LogoSvg {
+    height: 40px;
+    width: 40px;
+  }
+  .LogoSvg path {
+    fill: var(--light);
+    transition: fill 0.3s;
+  }
+  .LogoDark .LogoSvg path {
+    fill: var(--light);
+  }
+  .LogoLight .LogoSvg path {
+    fill: var(--dark);
+  }
+  .LogoContainer:hover,
+  .LogoContainer:hover .LogoSvg path {
+    cursor: pointer;
+    fill: var(--primary);
+  }
+  .MenuContainer {
+    width: 100%;
+    height: 100%;
+  }
+  .Menu {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+  }
+  /* ITEM */
+  .MenuItemTitleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 150px;
+    gap: 5px;
+  }
+  .MenuItemTitleContainer:hover {
+    cursor: pointer;
+    align-items: center;
+  }
+  /* TITLE ITEM */
+  .MenuItemTitleContainer:hover .ClDark,
+  .MenuItemTitleContainer:hover .ClLight {
+    color: var(--primary);
+  }
+  .MenuItemTitle {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  /* MORE SVG */
+  .MoreSvg {
+    height: 24px;
+  }
+  .Light .MoreSvg {
+    fill: var(--dark);
+  }
+  .Dark .MoreSvg {
+    fill: var(--light);
+  }
+  .MenuItemTitleContainer:hover .MoreSvg {
+    fill: var(--primary);
+  }
+  .MoreSvgActive {
+    animation: animationDeploySVG 0.4s;
+  }
+  @keyframes animationDeploySVG {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+  /* INFORMATION */
+  .InfoContainer{
+    display: flex;
+    gap: 20px;
+    padding: 0px 30px;
+  }
+  /* SHOPPING CART */
+  .ShoppingCartContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40px;
+  }
+  .ShoppingCartSvg{
+    height: 40px;
+    transition: fill .3s;
+    cursor: pointer;
+  }
+  .ModeDark .ShoppingCartSvg{
+    fill: var(--light);
+  }
+  .ModeLight .ShoppingCartSvg{
+    fill: var(--dark);
+  }
+  .ShoppingCartContainer:hover .ShoppingCartSvg{
+    fill: var(--primary);
+  }
+  /* ACCOUNT */
+  .AccountContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40px;
+  }
+  .AccountSvg{
+    height: 40px;
+    transition: fill .3s;
+    cursor: pointer;
+  }
+  .ModeDark .AccountSvg{
+    fill: var(--light);
+  }
+  .ModeLight .AccountSvg{
+    fill: var(--dark);
+  }
+  .AccountContainer:hover .AccountSvg{
+    fill: var(--primary);
+  }
+  /* MODE */
+  .ModeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .SwitchMode{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .LightModeSvg{
+    height: 40px;
+    transition: fill .4s, height .5s;
+  }
+  .ModeDark .LightModeSvg{
+    fill: var(--light);
+  }
+  .ModeLight .LightModeSvg{
+    fill: var(--dark);
+    height: 20px;
+  }
+  .DarkModeSvg{
+    height: 40px;
+    transition: fill .4s, height .5s;
+  }
+  .ModeDark .DarkModeSvg{
+    fill: var(--light);
+    height: 20px;
+  }
+  .ModeLight .DarkModeSvg{
+    fill: var(--dark);
+  }
+  .ModeLight:hover .DarkModeSvg{
+    fill: var(--primary);
+  }
+  .ModeDark:hover .LightModeSvg{
+    fill: var(--primary);
+  }
+}

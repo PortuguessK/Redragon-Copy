@@ -1,10 +1,12 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import "./Main.css"
+import '@fontsource-variable/dm-sans';
+import { Nav } from './Nav/Nav'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const root = ReactDOM.createRoot(document.getElementById('main'))
+
+root.render(
+  <>
+  <Nav/>
+  </>
 )

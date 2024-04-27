@@ -1,0 +1,31 @@
+:root{
+    --primary: #e50b22;
+    --light: #eee;
+    --light-hover: #bbb;
+    --dark: #222;
+    --dark-hover: #444;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans Variable', sans-serif;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.ClLight{
+    color: var(--light);
+}
+.ClDark{
+    color: var(--dark);
+}
+.FillLight{
+    fill: var(--light);
+}
+.FillDark{
+    fill: var(--dark);
+}
